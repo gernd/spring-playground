@@ -1,0 +1,4 @@
+foo:
+  myconf: set from application yaml in config folder
+  random: ${random.value}
+  testVal: from application.yml
