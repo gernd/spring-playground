@@ -2,11 +2,13 @@ package de.gernd;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 
 import java.util.Arrays;
 
 @SpringBootApplication
+@EnableConfigurationProperties(UserConfig.class)
 public class SpringConfigurationApplication {
 
     public static void main(String[] args) {
