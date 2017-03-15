@@ -1,3 +1,4 @@
+# default values
 foo:
   myconf: set from application yaml in config folder
   random: ${random.value}
@@ -6,3 +7,12 @@ foo:
 user:
   nick: walter
   password: top secret
+
+envVar: default
+
+# environment specific values -> can be set using spring.active.profiles via command line args
+environments:
+  develop:
+    envVar: Development
+  prod:
+    envVar: production

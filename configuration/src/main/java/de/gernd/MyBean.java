@@ -19,8 +19,14 @@ public class MyBean {
     @Value("${foo.testVal}")
     private String testVal;
 
+    @Value("${envVar}")
+    private String envVar;
+
     @Autowired
     private UserConfig userConfig;
+
+    @Autowired
+    String dataSource;
 
     public void printConfig() {
         System.out.println("in Resource: " + inResourceVal);
@@ -28,5 +34,7 @@ public class MyBean {
         System.out.println("random val: " + myRandom);
         System.out.println("test value: " + testVal);
         System.out.println("User config is " + userConfig);
+        System.out.println("Env var is " + envVar);
+        System.out.println("Data Source is " + dataSource);
     }
 }
